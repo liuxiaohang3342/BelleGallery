@@ -1,0 +1,58 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="#99262630"
+            android:gravity="center"
+            android:text="美女云集"
+            android:textSize="20dp" />
+
+
+        <FrameLayout
+            android:id="@+id/content_below"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_title" />
+
+        <com.example.lxh.bellegallery.view.WaveView
+            android:id="@+id/wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_title">
+
+            <FrameLayout
+                android:id="@+id/content_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.example.lxh.bellegallery.view.WaveView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="@dimen/sliding_menu_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|bottom"
+        android:scrollbars="none">
+
+        <com.example.lxh.bellegallery.view.MenuDrawerLayout
+            android:id="@+id/left_drawer"
+            android:layout_width="@dimen/sliding_menu_width"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:orientation="vertical" />
+    </ScrollView>
+
+
+</android.support.v4.widget.DrawerLayout>
